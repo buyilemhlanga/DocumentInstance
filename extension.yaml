@@ -1,0 +1,83 @@
+# Learn detailed information about the fields of an extension.yaml file in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml
+
+# Identifier for your extension
+# TODO: Replace this with an descriptive name for your extension.
+name: document-instance
+version: 0.0.1  # Follow semver versioning
+specVersion: v1beta  # Version of the Firebase Extensions specification
+
+# Friendly display name for your extension (~3-5 words)
+displayName: Document Instance
+
+# Brief description of the task your extension performs (~1 sentence)
+description: >-
+  Creates a snapshot of a document when you create, write or delete a document in a collection .
+
+license: Apache-2.0  # https://spdx.org/licenses/
+
+# Public URL for the source code of your extension.
+# TODO:  Replace this with your GitHub repo.
+sourceUrl: https://github.com/ORG_OR_USER/REPO_NAME
+
+# Specify whether a paid-tier billing plan is required to use your extension.
+# Learn more in the docs: https://firebase.google.com/docs/extensions/reference/extension-yaml#billing-required-field
+billingRequired: false
+
+
+
+roles:
+  - role: datastore.user
+    reason:
+      Allows this extension to access Cloud Firestore to read and process specified documents.
+
+
+resources:
+  resources:
+  - name: onSourceDocumentChange
+    type: firebaseextensions.v1beta.function
+    description: >-
+      A function that is triggered when a document is created, updated, or
+      deleted in the source collection and creates a snapshot of the document.
+    properties:
+      location: ${param:LOCATION}
+      eventTrigger:
+        eventType: providers/cloud.firestore/eventTypes/document.write
+        resource: projects/${param:PROJECT_ID}/databases/(default)/documents/${param:SOURCE_COLLECTION}/{documentId}
+      runtime: nodejs16
+
+
+
+# In the `params` field, set up your extension's user-configured parameters.
+# Learn more in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml#params-field
+params:
+  - param: SOURCE_COLLECTION
+    label: Source Collection to watch
+    description: >-
+      What is the path to the firestore collection that contains the documents that this extension needs to watch for changes in.
+    
+    type: string
+    validationRegex: "^[^/]+(/[^/]+/[^/]+)*$"
+    validationErrorMessage: Must be a valid Cloud Firestore collection
+    required: true
+
+
+  - param: TARGET_COLLECTION
+    label: Target Collection to Save
+    description: >-
+      What is the path of the collection you want to save these the snapshots to.
+    
+    type: string
+    validationRegex: "^[^/]+(/[^/]+/[^/]+)*$"
+    validationErrorMessage: Must be a valid Cloud Firestore collection
+    required: true
+
+  - param: SNAPSHOT_FIELDS
+    label: Fields to included in snapshot
+    description: >-
+      The names of the fields in the that you want to include in the snapshot of the document when there is a write event. 
+      Leave this field empty to include all fields
+    type: string
+    example: name,email
+    required: false

@@ -1,0 +1,146 @@
+[debug] [2025-02-06T13:58:19.976Z] ----------------------------------------------------------------------
+[debug] [2025-02-06T13:58:19.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js ext:dev:upload elytron/create-document-instance --local
+[debug] [2025-02-06T13:58:19.977Z] CLI Version:   13.30.0
+[debug] [2025-02-06T13:58:19.977Z] Platform:      win32
+[debug] [2025-02-06T13:58:19.978Z] Node Version:  v22.11.0
+[debug] [2025-02-06T13:58:19.978Z] Time:          Thu Feb 06 2025 15:58:19 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-02-06T13:58:19.978Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-06T13:58:19.982Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-06T13:58:19.983Z] > authorizing via signed-in user (buyiledmhlanga@gmail.com)
+[debug] [2025-02-06T13:58:19.984Z] Checked if tokens are valid: false, expires at: 1732306035827
+[debug] [2025-02-06T13:58:19.984Z] Checked if tokens are valid: false, expires at: 1732306035827
+[debug] [2025-02-06T13:58:19.984Z] > refreshing access token with scopes: []
+[debug] [2025-02-06T13:58:19.986Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-02-06T13:58:19.986Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-06T13:58:20.516Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-02-06T13:58:20.516Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-06T13:58:20.532Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile publisherId=elytron
+[debug] [2025-02-06T13:58:22.782Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile 200
+[debug] [2025-02-06T13:58:22.783Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile {"name":"projects/27605614225/publisherProfile","publisherId":"elytron","registerTime":"2025-02-05T12:28:01.615270Z","displayName":"Elytron","state":"ACTIVE"}
+[debug] [2025-02-06T13:58:22.783Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:22.783Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:22.784Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 [none]
+[debug] [2025-02-06T13:58:24.723Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 200
+[debug] [2025-02-06T13:58:24.723Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 {"projectNumber":"27605614225","projectId":"elytron-d037c","lifecycleState":"ACTIVE","name":"elytron-d037c","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-05T12:27:15.592691Z"}
+[debug] [2025-02-06T13:58:24.724Z] Checking if latest publisher TOS has been accepted by 27605614225...
+[debug] [2025-02-06T13:58:24.724Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:24.724Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:24.724Z] >>> [apiv2][query] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos [none]
+[debug] [2025-02-06T13:58:26.739Z] <<< [apiv2][status] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos 200
+[debug] [2025-02-06T13:58:26.740Z] <<< [apiv2][body] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos {"name":"projects/27605614225/publishertos","latestTosVersion":"v1"}
+[info] To continue, you must accept the Firebase Extensions Publisher Terms of Service: https://firebase.google.com/terms/extensions/publisher
+[debug] [2025-02-06T13:58:30.715Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:30.715Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:30.716Z] >>> [apiv2][query] POST https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos:accept [none]
+[debug] [2025-02-06T13:58:30.716Z] >>> [apiv2][body] POST https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos:accept {"name":"project/27605614225/publishertos","version":"v1"}
+[debug] [2025-02-06T13:58:31.091Z] <<< [apiv2][status] POST https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos:accept 200
+[debug] [2025-02-06T13:58:31.091Z] <<< [apiv2][body] POST https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos:accept {"name":"projects/27605614225/publishertos","lastAcceptedVersion":"v1","lastAcceptedTime":"2025-02-06T13:58:29.913423Z","latestTosVersion":"v1"}
+[debug] [2025-02-06T13:58:31.092Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:31.093Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T13:58:31.093Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance [none]
+[debug] [2025-02-06T13:58:33.060Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance 404
+[debug] [2025-02-06T13:58:33.060Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance {"error":{"code":404,"message":"Extension `publishers/elytron/extensions/create-document-instance` not found","status":"NOT_FOUND"}}
+[info] 
+Extension: elytron/create-document-instance
+State: New
+
+[debug] [2025-02-06T13:58:33.542Z] TypeError: spec.resources is not iterable
+    at validateSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:246:37)
+    at getLocalExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\localHelper.js:20:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async validateExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:456:27)
+    at async uploadExtensionVersionFromLocalSource (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:693:27)
+    at async Command.uploadExtensionAction [as actionFn] (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\commands\ext-dev-upload.js:58:15)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-02-06T14:00:09.477Z] ----------------------------------------------------------------------
+[debug] [2025-02-06T14:00:09.478Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js ext:dev:upload elytron/create-document-instance --local
+[debug] [2025-02-06T14:00:09.479Z] CLI Version:   13.30.0
+[debug] [2025-02-06T14:00:09.479Z] Platform:      win32
+[debug] [2025-02-06T14:00:09.479Z] Node Version:  v22.11.0
+[debug] [2025-02-06T14:00:09.479Z] Time:          Thu Feb 06 2025 16:00:09 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-02-06T14:00:09.479Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-06T14:00:09.484Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-06T14:00:09.484Z] > authorizing via signed-in user (buyiledmhlanga@gmail.com)
+[debug] [2025-02-06T14:00:09.485Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:09.485Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:09.486Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile publisherId=elytron
+[debug] [2025-02-06T14:00:11.386Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile 200
+[debug] [2025-02-06T14:00:11.387Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile {"name":"projects/27605614225/publisherProfile","publisherId":"elytron","registerTime":"2025-02-05T12:28:01.615270Z","displayName":"Elytron","state":"ACTIVE"}
+[debug] [2025-02-06T14:00:11.387Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:11.387Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:11.387Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 [none]
+[debug] [2025-02-06T14:00:13.131Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 200
+[debug] [2025-02-06T14:00:13.131Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 {"projectNumber":"27605614225","projectId":"elytron-d037c","lifecycleState":"ACTIVE","name":"elytron-d037c","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-05T12:27:15.592691Z"}
+[debug] [2025-02-06T14:00:13.131Z] Checking if latest publisher TOS has been accepted by 27605614225...
+[debug] [2025-02-06T14:00:13.131Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:13.131Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:13.131Z] >>> [apiv2][query] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos [none]
+[debug] [2025-02-06T14:00:15.052Z] <<< [apiv2][status] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos 200
+[debug] [2025-02-06T14:00:15.052Z] <<< [apiv2][body] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos {"name":"projects/27605614225/publishertos","lastAcceptedVersion":"v1","lastAcceptedTime":"2025-02-06T13:58:29.913423Z","latestTosVersion":"v1"}
+[debug] [2025-02-06T14:00:15.052Z] Already accepted version v1 of Extensions publisher TOS.
+[debug] [2025-02-06T14:00:15.053Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:15.053Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:00:15.053Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance [none]
+[debug] [2025-02-06T14:00:15.435Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance 404
+[debug] [2025-02-06T14:00:15.435Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/create-document-instance {"error":{"code":404,"message":"Extension `publishers/elytron/extensions/create-document-instance` not found","status":"NOT_FOUND"}}
+[info] 
+Extension: elytron/create-document-instance
+State: New
+
+[debug] [2025-02-06T14:00:15.910Z] TypeError: spec.resources is not iterable
+    at validateSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:246:37)
+    at getLocalExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\localHelper.js:20:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async validateExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:456:27)
+    at async uploadExtensionVersionFromLocalSource (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:693:27)
+    at async Command.uploadExtensionAction [as actionFn] (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\commands\ext-dev-upload.js:58:15)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-02-06T14:02:49.299Z] ----------------------------------------------------------------------
+[debug] [2025-02-06T14:02:49.300Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js ext:dev:upload elytron/document-instance --local
+[debug] [2025-02-06T14:02:49.300Z] CLI Version:   13.30.0
+[debug] [2025-02-06T14:02:49.301Z] Platform:      win32
+[debug] [2025-02-06T14:02:49.301Z] Node Version:  v22.11.0
+[debug] [2025-02-06T14:02:49.301Z] Time:          Thu Feb 06 2025 16:02:49 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-02-06T14:02:49.301Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-06T14:02:49.306Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-06T14:02:49.306Z] > authorizing via signed-in user (buyiledmhlanga@gmail.com)
+[debug] [2025-02-06T14:02:49.307Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:49.307Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:49.308Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile publisherId=elytron
+[debug] [2025-02-06T14:02:51.355Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile 200
+[debug] [2025-02-06T14:02:51.355Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/projects/-/publisherProfile {"name":"projects/27605614225/publisherProfile","publisherId":"elytron","registerTime":"2025-02-05T12:28:01.615270Z","displayName":"Elytron","state":"ACTIVE"}
+[debug] [2025-02-06T14:02:51.356Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:51.356Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:51.356Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 [none]
+[debug] [2025-02-06T14:02:53.092Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 200
+[debug] [2025-02-06T14:02:53.092Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/27605614225 {"projectNumber":"27605614225","projectId":"elytron-d037c","lifecycleState":"ACTIVE","name":"elytron-d037c","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-05T12:27:15.592691Z"}
+[debug] [2025-02-06T14:02:53.093Z] Checking if latest publisher TOS has been accepted by 27605614225...
+[debug] [2025-02-06T14:02:53.093Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:53.093Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:53.093Z] >>> [apiv2][query] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos [none]
+[debug] [2025-02-06T14:02:55.035Z] <<< [apiv2][status] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos 200
+[debug] [2025-02-06T14:02:55.036Z] <<< [apiv2][body] GET https://firebaseextensionstos-pa.googleapis.com/v1/projects/27605614225/publishertos {"name":"projects/27605614225/publishertos","lastAcceptedVersion":"v1","lastAcceptedTime":"2025-02-06T13:58:29.913423Z","latestTosVersion":"v1"}
+[debug] [2025-02-06T14:02:55.036Z] Already accepted version v1 of Extensions publisher TOS.
+[debug] [2025-02-06T14:02:55.037Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:55.038Z] Checked if tokens are valid: true, expires at: 1738853899516
+[debug] [2025-02-06T14:02:55.038Z] >>> [apiv2][query] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/document-instance [none]
+[debug] [2025-02-06T14:02:55.454Z] <<< [apiv2][status] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/document-instance 404
+[debug] [2025-02-06T14:02:55.454Z] <<< [apiv2][body] GET https://firebaseextensionspublisher.googleapis.com/v1beta/publishers/elytron/extensions/document-instance {"error":{"code":404,"message":"Extension `publishers/elytron/extensions/document-instance` not found","status":"NOT_FOUND"}}
+[info] 
+Extension: elytron/document-instance
+State: New
+
+[debug] [2025-02-06T14:02:55.927Z] TypeError: spec.resources is not iterable
+    at validateSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:246:37)
+    at getLocalExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\localHelper.js:20:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async validateExtensionSpec (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:456:27)
+    at async uploadExtensionVersionFromLocalSource (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\extensions\extensionsHelper.js:693:27)
+    at async Command.uploadExtensionAction [as actionFn] (C:\Users\buyil\AppData\Roaming\nvm\v22.11.0\node_modules\firebase-tools\lib\commands\ext-dev-upload.js:58:15)
+[error] 
+[error] Error: An unexpected error has occurred.
